@@ -23,12 +23,13 @@ body {
 
 #container {
   width: 360px;
-  border: 1px solid white;
   margin: auto; /*Funciona apenas para centralizar a largura. Não funciona com a alatura*/
+  padding-top: 56px;
 }
 
 #profile {
   text-align: center;
+  padding: 24px;
 }
 
 #profile > img {
@@ -40,4 +41,5 @@ body {
 #profile > p {
   font-weight: 500;
   line-height: 24px;
+  margin-top: 8px;
 }

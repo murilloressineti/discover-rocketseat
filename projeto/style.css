@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+body {
+  /*background-image: url(assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  background: url(assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  border: 1px solid white;
+  margin: auto; /*Funciona apenas para centralizar a largura. Não funciona com a alatura*/
+}
+
+#profile {
+  text-align: center;
+}
+
+#profile > img {
+  width: 112px;
+  display: block; /*Em elementos "inline" não conseguimos aplicar o margin: auto;*/
+  margin: auto;
+}
+
+#profile > p {
+  font-weight: 500;
+  line-height: 24px;
+}

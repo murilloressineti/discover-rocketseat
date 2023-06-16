@@ -23,8 +23,8 @@ body {
 
 #container {
   width: 360px;
-  margin: auto; /*Funciona apenas para centralizar a largura. Não funciona com a alatura*/
-  padding-top: 56px;
+  margin: 56px auto 0px; /* Auto funciona apenas para centralizar a largura. Não funciona com a altura*/
+  padding: 0px 24px;
 }
 
 #profile {
@@ -42,4 +42,68 @@ body {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+}
+
+ul {
+  list-style: none;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0px;
+}
+
+ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.103);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul > li > a:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1.5px solid white;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0px;
+
+  font-size: 24px;
+}
+
+#social-links > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links > a:hover {
+  background: rgba(255, 255, 255, 0.205);
+}
+
+footer {
+  padding: 24px 0px;
+  text-align: center;
+  font-size: 14px;
 }

@@ -39,10 +39,12 @@ body {
   */
 
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 56px; /* Auto funciona apenas para centralizar a largura. Não funciona com a altura*/
   padding: 0px 24px;
 }
@@ -83,6 +85,8 @@ body {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
 }
 
 #switch > span {
@@ -97,8 +101,11 @@ body {
 }
 
 .light #switch > button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch > button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 ul {
@@ -163,4 +170,32 @@ footer {
   padding: 24px 0px;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
